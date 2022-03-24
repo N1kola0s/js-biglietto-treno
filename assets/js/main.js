@@ -33,21 +33,30 @@ if (age < 18){
 
     const discount_under18 = full_price * 0.20;
     const price_under18 = full_price - discount_under18;
+    let price_fixed = price_under18.toFixed(2);
     
-    console.log(`il prezzo del tuo biglietto è ${price_under18} €`);
+    console.log(`il prezzo del tuo biglietto è ${price_fixed} €`);
+
+    document.getElementById("train_ticket").innerHTML = (`Il prezzo del tuo biglietto è ${price_fixed} €`);
 } 
 
 else if (age > 65) {
     /* il prezzo del biglietto con lo sconto per gli over65 */
     const discount_over65 = full_price * 0.40;
     const price_over65 = full_price - discount_over65;
+    let price_fixed = price_over65.toFixed(2);
 
-    console.log(`Il prezzo del tuo biglietto è ${price_over65} €`);
+    console.log(`Il prezzo del tuo biglietto è ${price_fixed} €`);
+
+    document.getElementById("train_ticket").innerHTML = (`Il prezzo del tuo biglietto è ${price_fixed} €`);
 }
 
 else {
     /* il prezzo del biglietto intero */
-    console.log(` Il prezzo del tuo biglietto è ${full_price} €`);
+    let price_fixed = full_price.toFixed(2);
+    console.log(` Il prezzo del tuo biglietto è ${price_fixed} €`);
+
+    document.getElementById("train_ticket").innerHTML = `Il prezzo del tuo biglietto è ${price_fixed} €`;
 }
 
 
